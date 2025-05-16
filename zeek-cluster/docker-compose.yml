@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  manager:
+    image: zeek/zeek:latest
+    container_name: zeek-manager
+    tty: true
+    stdin_open: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./zeek:/usr/local/zeek/etc
+      - zeek-logs:/usr/local/zeek/logs
+    # networks:
+    #   - zeeknet
+    command: /bin/bash
+
+  worker1:
+    image: zeek/zeek:latest
+    container_name: zeek-worker1
+    tty: true
+    stdin_open: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    network_mode: host
+    # networks:
+    #   - zeeknet
+    command: /bin/bash
+
+  worker2:
+    image: zeek/zeek:latest
+    container_name: zeek-worker2
+    tty: true
+    stdin_open: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    network_mode: host
+    # networks:
+    #   - zeeknet
+    command: /bin/bash
+
+volumes:
+  zeek-logs:
+
+# networks:
+#   zeeknet:
+#     driver: bridge
