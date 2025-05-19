@@ -168,11 +168,4 @@ ssh-keyscan -H 172.21.0.2 >> ~/.ssh/known_hosts
 
 ---
 
-## 📦 Optional: Package All This
 
-Would you like me to:
-
-* ZIP this entire setup into a download?
-* Or generate a `setup.sh` script that builds + installs + deploys everything?
-
-Let me know — I can deliver either.
