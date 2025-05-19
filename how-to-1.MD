@@ -1,9 +1,6 @@
-Solve the SSH issue among manager-worker configuration:
----
-
 # ✅ **PART 1: Fool-Proof Setup (Steps + Commands + Where to Run)**
 
-This guide assumes you're using Linux or WSL with Docker installed.
+Linux or WSL with Docker installed.
 
 ---
 
@@ -207,4 +204,3 @@ Type **`Next`** and I’ll now generate:
 * All config files
 * Full directory structure
 
-so you can set it up instantly.
